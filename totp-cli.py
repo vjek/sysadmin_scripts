@@ -38,8 +38,6 @@ def parse_enc_file(db_file):
         if len(fields) == 1 and len(secrets_dict) == 0:
             print("Decryption failed.")
             exit()
-    iv = ''
-    passphrase = ''
     return(secrets_dict)
 
 def main():
