@@ -1,0 +1,24 @@
+#~/.ssh/config file should contain at least this host entry:
+#the dynamic forward entry can be used as a socks proxy for/from the egressing server,
+# to provide unfiltered Internet access.
+#the remoteforward is the listener created to permit ssh back through the tunnel
+# on the target server (target.duckns.org or whatever you implement) you would run:
+# ssh -D 65222 -C -X -q -p 2222 my_user_name@127.0.0.1 , for example, to connect.
+#the -D in the above is to permit a socks proxy on the *internal* network.
+#the port value is one that you'll need to have sshd listening on, on the external network.
+#it will also need to be a TCP port that is permitted to egress.
+
+Host host1
+   ServerAliveCountMax 2
+   ServerAliveInterval 30
+   TCPKeepAlive yes
+   CheckHostIP no
+   User my_user_name
+   HostKeyAlias host1
+   HostName target.duckdns.org
+   DynamicForward 63222
+   RemoteForward 2222 127.0.0.1:22
+   RequestTTY no
+   ForwardX11 no
+   Port 443
+   ExitOnForwardFailure yes
