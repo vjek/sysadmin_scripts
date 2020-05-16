@@ -3,6 +3,11 @@ import random,sys
 # use combination of color, animal, vegetable, mineral, specials, number
 # to create some passwords that are reasonably strong
 # 20190213 by me. updated 20200320 with more entries in each category
+# 20200516 updated to have case changing/randomization
+def randomcase(my_str):
+    randomcase_str = ''.join(random.choice((str.upper, str.lower))(c) for c in my_str)
+    return randomcase_str
+
 specials = ['!','#','^','&','(',')','@','$','%','*','-','_','=','+','{','}','[',']','<','>','/','\\']
 
 colors = ['Aqua','Aquamarine','Azure','Beige','Black','Blue','Brown','Chartreuse',
@@ -44,10 +49,10 @@ for x in range(0,count):
     random.shuffle(specials)
     random.shuffle(order)
 #assignments
-    random_animal = random.choice(animals)
-    random_vegetable = random.choice(vegetables)
-    random_mineral = random.choice(minerals)
-    random_color = random.choice(colors)
+    random_animal = randomcase(random.choice(animals))
+    random_vegetable = randomcase(random.choice(vegetables))
+    random_mineral = randomcase(random.choice(minerals))
+    random_color = randomcase(random.choice(colors))
     random_special = random.choice(specials)
     random_digits = random.randint(0, 9999)
 #output
