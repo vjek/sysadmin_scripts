@@ -13,7 +13,7 @@
 #   HostKeyAlias host1
 #   HostName target.duckdns.org
 #for proxychains:
-#   DynamicForward 63222
+#   DynamicForward 65222
 #for sshing back on localhost
 #   RemoteForward 2222 127.0.0.1:22
 #   ForwardX11 no
