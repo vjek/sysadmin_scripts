@@ -14,7 +14,7 @@ PAnGOLINdiAMOndpaPAya1202\TEal
 kangArOopuMPKin0212+dIAMONdpUrPLE 
 6430AquAmARInECAt!EmeraldRAdish 
 paRSleytUrtLe7266OlIveopAL# 
-HEMaTItE9637BEEtazURemONKEY\ `
+HEMaTItE9637BEEtazURemONKEY\
 ```
 mynotes.py - keeps notes, records, or a journal in a searchable archive
 
