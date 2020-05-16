@@ -16,7 +16,7 @@ Host host1
    User my_user_name
    HostKeyAlias host1
    HostName target.duckdns.org
-   DynamicForward 63222
+   DynamicForward 65222
    RemoteForward 2222 127.0.0.1:22
    RequestTTY no
    ForwardX11 no
